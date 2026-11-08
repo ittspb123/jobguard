@@ -1,6 +1,6 @@
 # JobGuard
 
-A Chrome extension that spots **fake job and internship scams** and warns students before they hand over their SSN or bank details. Built at CrownHacks 2026 (Cybersecurity track.
+A Chrome extension that spots **fake job and internship scams** and warns students before they hand over any sensitive information. Built at CrownHacks 2026 (Cybersecurity track)
 
 It reads a job posting, checks it with 10 local rules plus an AI model, and shows a calm warning that explains, in plain English, what's wrong.
 
@@ -14,7 +14,7 @@ Job page → reads text, links, and form-field LABELS (never what you type)
          → green (quiet) · yellow (caution) · red (blocking warning)
 ```
 
-The red warning only appears at the moment of risk — when a scam page asks for your SSN, bank, or ID. Each reason is tagged **Rule** or **AI**.
+The red warning only appears at the moment of risk for example when a scam page asks for your SSN, bank, or ID. Each reason is tagged **Rule** or **AI**.
 
 ## Quick start
 
