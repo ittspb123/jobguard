@@ -18,12 +18,12 @@ The red warning only appears at the moment of risk for example when a scam page 
 
 ## Quick start
 
-1. `chrome://extensions` → turn on **Developer mode** → **Load unpacked** → select this folder.
-2. Backend with a mock AI (no AWS needed): `npm run dev-server`
-3. Demo pages: `npm run demo-pages` → open http://localhost:8000
-4. On a demo page, click the JobGuard icon → **Check this page**.
+## Quick start
 
-Run the tests: `npm test`
+1. **Load the extension:** open `chrome://extensions`, turn on **Developer mode**, click **Load unpacked**, and select this folder.
+2. **Open the demo pages:** run `npm run demo-pages`, then visit http://localhost:8000.
+3. **Try it:** on any demo page, click the JobGuard icon, then **Check this page**.
+4. **Run the tests:** `npm test`
 
 ## Privacy & permissions
 
