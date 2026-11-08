@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Deloitte New Hire Onboarding | Direct Deposit Setup</title><link rel="stylesheet" href="demo.css"></head>
+<body>
+  <div class="topbar">Deloitte · New Hire Onboarding</div>
+  <main>
+    <h1>Welcome to the Deloitte team!</h1>
+    <p class="meta">Congratulations on your new position. Complete onboarding within 24 hours to secure your start date.</p>
+
+    <p>To set up payroll and ship your equipment, please complete the form below. Questions? Message your hiring manager on WhatsApp or email onboarding.deloitte@outlook.com.</p>
+
+    <form onsubmit="event.preventDefault(); alert('Demo form: nothing was sent.');" autocomplete="off">
+      <label>Full legal name <input name="fullname" type="text"></label>
+      <label for="ssn">Social Security Number</label>
+      <input id="ssn" name="ssn" type="text" inputmode="numeric">
+      <label>Date of birth <input name="dob" type="text" placeholder="MM/DD/YYYY"></label>
+      <label>Bank routing number <input name="routing" type="text" inputmode="numeric"></label>
+      <label>Checking account number <input name="account_number" type="text" inputmode="numeric"></label>
+      <label>Upload a photo of your driver's license <input name="license_upload" type="file"></label>
+      <button type="submit">Submit onboarding</button>
+    </form>
+  </main>
+  <p class="demo-note">JobGuard demo page. This is a fictional scam for testing. The form sends nothing anywhere.</p>
+</body>
+</html>

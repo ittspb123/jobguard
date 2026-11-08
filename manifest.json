@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "JobGuard",
+  "version": "0.1.0",
+  "description": "Spots fake job postings and scam onboarding forms, and explains why in plain language.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "JobGuard",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": [
+    "https://*.linkedin.com/jobs/*",
+    "https://*.joinhandshake.com/*",
+    "https://*.indeed.com/*",
+    "https://boards.greenhouse.io/*",
+    "https://job-boards.greenhouse.io/*",
+    "https://jobs.lever.co/*",
+    "https://*.myworkdayjobs.com/*",
+    "https://*.lambda-url.us-east-2.on.aws/*",
+    "http://localhost:8787/*"
+  ],
+  "optional_host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.linkedin.com/jobs/*",
+        "https://*.joinhandshake.com/*",
+        "https://*.indeed.com/*",
+        "https://boards.greenhouse.io/*",
+        "https://job-boards.greenhouse.io/*",
+        "https://jobs.lever.co/*",
+        "https://*.myworkdayjobs.com/*"
+      ],
+      "js": ["content/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'"
+  }
+}

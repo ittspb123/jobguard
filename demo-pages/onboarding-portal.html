@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halcyon Partners | New Hire Portal</title>
+  <style>
+    :root {
+      --ink: #14213d; --muted: #5b6478; --line: #e3e7ef; --bg: #eef1f6; --card: #ffffff;
+      --brand: #1d4ed8; --brand-dark: #1e3a8a; --accent: #0ea5e9;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.55 "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; }
+
+    .demo-banner { background: #fde68a; color: #713f12; text-align: center; padding: 7px 16px; font-size: 13px; font-weight: 600; }
+
+    .topbar { display: flex; align-items: center; justify-content: space-between; padding: 14px 28px; background: var(--card); border-bottom: 1px solid var(--line); }
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 700; font-size: 18px; letter-spacing: -.01em; }
+    .logo { width: 34px; height: 34px; border-radius: 9px; background: linear-gradient(135deg, var(--brand), var(--accent)); display: grid; place-items: center; color: #fff; font-weight: 800; font-size: 17px; }
+    .topnav { color: var(--muted); font-size: 13px; }
+
+    .hero { background: linear-gradient(120deg, var(--brand-dark), var(--brand)); color: #fff; padding: 34px 28px; }
+    .hero-inner { max-width: 880px; margin: 0 auto; }
+    .hero h1 { margin: 0 0 6px; font-size: 25px; }
+    .hero p { margin: 0; opacity: .9; font-size: 15px; }
+
+    .wrap { max-width: 880px; margin: -20px auto 40px; padding: 0 20px; }
+    .steps { display: flex; gap: 8px; margin-bottom: 18px; }
+    .step { flex: 1; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 11px 14px; font-size: 12.5px; color: var(--muted); }
+    .step.active { border-color: var(--brand); color: var(--brand); font-weight: 700; box-shadow: 0 2px 8px rgba(29,78,216,.1); }
+    .step b { display: block; font-size: 15px; color: inherit; }
+
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 26px 28px; box-shadow: 0 6px 24px rgba(20,33,61,.06); }
+    .card h2 { margin: 0 0 4px; font-size: 19px; }
+    .card .sub { margin: 0 0 20px; color: var(--muted); font-size: 14px; }
+
+    .urgent { display: flex; gap: 10px; align-items: flex-start; background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; border-radius: 10px; padding: 12px 14px; margin-bottom: 22px; font-size: 13.5px; }
+
+    fieldset { border: 0; margin: 0 0 22px; padding: 0; }
+    legend { font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); padding: 0; margin-bottom: 12px; border-top: 1px solid var(--line); padding-top: 16px; width: 100%; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 18px; }
+    .full { grid-column: 1 / -1; }
+    label { display: grid; gap: 5px; font-size: 13.5px; font-weight: 600; }
+    input { font: inherit; padding: 10px 12px; border: 1px solid #c9d1e0; border-radius: 8px; font-weight: 400; background: #fcfdff; }
+    input:focus { outline: 2px solid var(--brand); border-color: var(--brand); }
+    .hint { font-weight: 400; font-size: 12px; color: var(--muted); }
+
+    .actions { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; }
+    .secure { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+    button { font: inherit; font-weight: 700; padding: 12px 26px; border: 0; background: var(--brand); color: #fff; border-radius: 9px; cursor: pointer; }
+    button:hover { background: var(--brand-dark); }
+
+    footer { max-width: 880px; margin: 0 auto 40px; padding: 0 20px; color: var(--muted); font-size: 12px; text-align: center; }
+    @media (max-width: 620px) { .grid { grid-template-columns: 1fr; } .steps { flex-direction: column; } }
+  </style>
+</head>
+<body>
+  <div class="demo-banner">JobGuard demo page — Halcyon Partners is a fictional company. This form is inert and collects or sends nothing.</div>
+
+  <div class="topbar">
+    <div class="brand"><span class="logo">H</span> Halcyon Partners</div>
+    <div class="topnav">New Hire Portal · Secure Onboarding</div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <h1>Welcome aboard, future Halcyon analyst!</h1>
+      <p>Congratulations on your offer. Complete your payroll and identity verification to lock in your start date.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="steps">
+      <div class="step">Step 1<b>Offer accepted</b></div>
+      <div class="step active">Step 2<b>Payroll &amp; identity</b></div>
+      <div class="step">Step 3<b>Equipment</b></div>
+    </div>
+
+    <div class="card">
+      <h2>Payroll &amp; Identity Verification</h2>
+      <p class="sub">We use this to set up direct deposit and run your onboarding background check.</p>
+
+      <div class="urgent">
+        <span>⏰</span>
+        <div><strong>Action required within 24 hours.</strong> Your start date is not confirmed until this form is submitted. For questions, message your hiring manager on WhatsApp or email onboarding.halcyon@gmail.com.</div>
+      </div>
+
+      <form onsubmit="event.preventDefault(); alert('Demo form — nothing was submitted or sent anywhere.');" autocomplete="off">
+        <fieldset>
+          <legend>Personal information</legend>
+          <div class="grid">
+            <label>Full legal name <input name="fullname" type="text" placeholder="Jordan A. Smith"></label>
+            <label>Date of birth <input name="dob" type="text" placeholder="MM / DD / YYYY"></label>
+            <label for="ssn">Social Security Number
+              <input id="ssn" name="ssn" type="text" inputmode="numeric" placeholder="123-45-6789">
+              <span class="hint">Required for your background check and tax setup.</span>
+            </label>
+            <label>Upload a photo of your driver's license <input name="license_upload" type="file"></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Direct deposit</legend>
+          <div class="grid">
+            <label>Bank name <input name="bankname" type="text" placeholder="e.g. First National"></label>
+            <label>Account type <input name="accttype" type="text" placeholder="Checking / Savings"></label>
+            <label>Bank routing number <input name="routing" type="text" inputmode="numeric" placeholder="9 digits"></label>
+            <label>Checking account number <input name="account_number" type="text" inputmode="numeric" placeholder="Account #"></label>
+          </div>
+        </fieldset>
+
+        <div class="actions">
+          <span class="secure">🔒 Your information is encrypted and secure</span>
+          <button type="submit">Submit &amp; confirm start date</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>© 2026 Halcyon Partners (fictional). JobGuard demo page for CrownHacks — no data is collected, stored, or transmitted.</footer>
+</body>
+</html>

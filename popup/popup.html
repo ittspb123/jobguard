@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JobGuard</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="../icons/icon48.png" alt="" width="24" height="24">
+    <h1>JobGuard</h1>
+  </header>
+
+  <main>
+    <section id="verdict" class="verdict neutral" aria-live="polite">
+      <div class="verdict-head">
+        <span class="icon" id="v-icon" aria-hidden="true">?</span>
+        <div>
+          <p class="v-title" id="v-title">Not checked yet</p>
+          <p class="v-sub" id="v-sub">JobGuard checks job sites automatically. Use the button below for any other page.</p>
+        </div>
+      </div>
+      <ul id="reasons"></ul>
+      <p class="todo" id="todo" hidden></p>
+    </section>
+
+    <div class="row">
+      <button id="check" class="btn primary" type="button">Check this page</button>
+      <button id="trust" class="btn" type="button" hidden>I trust this site</button>
+      <button id="untrust" class="btn" type="button" hidden>Stop trusting this site</button>
+    </div>
+    <p id="status" class="status" role="status"></p>
+
+    <details>
+      <summary>Settings &amp; privacy</summary>
+      <label class="toggle">
+        <input type="checkbox" id="localOnly">
+        <span><strong>Local-only mode.</strong> Never send anything off this device. Turns off the AI check and domain-age lookup.</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="allSites">
+        <span><strong>Check every page automatically.</strong> Off by default. Chrome will ask you to allow access to all sites.</span>
+      </label>
+      <p class="small"><a href="../onboarding/onboarding.html" target="_blank">What JobGuard checks and what leaves your browser</a></p>
+      <p class="small" id="reportCount"></p>
+    </details>
+  </main>
+
+  <script src="popup.js" type="module"></script>
+</body>
+</html>

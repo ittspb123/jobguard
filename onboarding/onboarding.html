@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to JobGuard</title>
+  <link rel="stylesheet" href="onboarding.css">
+</head>
+<body>
+  <main>
+    <header>
+      <img src="../icons/icon128.png" alt="" width="56" height="56">
+      <div>
+        <h1>JobGuard is on</h1>
+        <p class="lead">It checks job postings for scam signs and warns you before you share personal or bank info.</p>
+      </div>
+    </header>
+
+    <section aria-labelledby="how">
+      <h2 id="how">How it warns you</h2>
+      <ul class="levels">
+        <li><span class="dot green" aria-hidden="true">✓</span><div><strong>Safe:</strong> just a small "OK" on the JobGuard icon. Nothing pops up.</div></li>
+        <li><span class="dot yellow" aria-hidden="true">!</span><div><strong>Caution:</strong> a small note on the page with what to double-check.</div></li>
+        <li><span class="dot red" aria-hidden="true">✕</span><div><strong>Stop:</strong> a full warning, only when a risky page asks for your SSN, bank, card or ID.</div></li>
+      </ul>
+      <p>Wrong warning? Click <strong>I trust this site</strong> and it won't warn you there again.</p>
+    </section>
+
+    <section aria-labelledby="privacy">
+      <h2 id="privacy">What leaves your browser</h2>
+      <table>
+        <caption class="sr-only">Data JobGuard handles</caption>
+        <thead><tr><th scope="col">Data</th><th scope="col">Where it goes</th></tr></thead>
+        <tbody>
+          <tr><td>What you type into forms</td><td><strong>Never read.</strong> JobGuard only looks at field labels.</td></tr>
+          <tr><td>Job posting text and the site's web address</td><td>Sent to the JobGuard AI check, with emails, phone numbers and long numbers removed. Not stored.</td></tr>
+          <tr><td>Other pages you visit</td><td>Not read, unless you turn on "Check every page."</td></tr>
+          <tr><td>Your browsing history</td><td>Never collected.</td></tr>
+          <tr><td>Trusted sites, settings, mistake reports</td><td>Saved only on this device.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="choices">
+      <h2 id="choices">Your choices</h2>
+      <label class="toggle">
+        <input type="checkbox" id="localOnly">
+        <span><strong>Local-only mode.</strong> Nothing ever leaves this device. Warnings still work, without the AI check.</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="allSites">
+        <span><strong>Check every page automatically</strong>, not just job sites. Catches scam pages you reach from a link. Chrome will ask for permission.</span>
+      </label>
+      <p class="status" id="status" role="status"></p>
+    </section>
+
+    <section aria-labelledby="covers">
+      <h2 id="covers">What JobGuard does and doesn't cover</h2>
+      <p><strong>Catches:</strong> fake job postings, websites pretending to be real companies, fake "onboarding" forms that steal your SSN or bank info, and "buy equipment" or check-deposit scams.</p>
+      <p><strong>Doesn't catch:</strong> scams that happen only by text, email or phone, or a real company's account that's been hacked. If someone asks you to pay to get a job, it's a scam, warning or not.</p>
+    </section>
+
+    <button id="done" class="btn primary" type="button">Got it</button>
+  </main>
+  <script src="onboarding.js" type="module"></script>
+</body>
+</html>
